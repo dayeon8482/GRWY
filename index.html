@@ -9,6 +9,15 @@
 <body>
   <main>
     <!--탑바 구현-->
+    <section class="search-box">
+      <div class="search-bar-wrap">
+        <div class="search-bar">
+          <input type="text" id="search" placeholder="검색어를 입력하세요" />
+          <nav class="search-btn"><img src="./img/search.png" alt="검색하기"></nav></div>
+          <div class="clear-btn"><img src="./img/clear.png" alt="취소"></div>
+      </div>
+
+    </section>
     <header>
       <section class="top-bar">
         <div class="logo-box">
@@ -18,18 +27,24 @@
           <ul class="flex">
             <li><a href="#">MEN</a></li>
             <li><a href="#">WOMEN</a></li>
-            <li><a href="#">ACCESSORY</a></li>
-            <li><a href="#">LOOK BOOK</a></li>
+            <li><a href="#">BRAND</a></li>
+            <li><a href="#">FAQ</a></li>
           </ul>
         </div>
         <div class="util-box">
             <ul class="flex">
-            <li class="util-seach util"><a href="#"><img src="./img/search.png" alt="검색"></a></li>
-            <li class="util-mypage util"><a href="#"><img src="./img/mypage.png" alt="마이페이지"></a></li>
+            <li class="util-search util"><img src="./img/search.png" alt="검색"></li>
+            <li class="util-mypage util"><img src="./img/mypage.png" alt="마이페이지">
+            <ul class="mypage-menu">
+              <li><a href="#">로그인</a></li>
+              <li><a href="#">회원가입</a></li>
+              <li><a href="#">아이디/비번찾기</a></li>
+            </ul></li>
             <li class="util-cart util"><a href="#"><img src="./img/cart.png" alt="장바구니"></a></li>
           </ul>
         </div>
       </section>
+      
     </header>
     <!--메인 구현-->
     <section></section>
