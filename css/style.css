@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+@font-face {
+font-family: 'Pretendard';
+src: url('../font/Pretendard/Pretendard-Regular.woff2') format('woff2');
+font-weight: 400;
+font-style: normal;
+font-display: swap;
+}
+
+@font-face {
+font-family: 'Pretendard';
+src: url('../font/Pretendard/Pretendard-Bold.woff2') format('woff2');
+font-weight: 700;
+font-style: normal;
+font-display: swap;
+}
+/*노말라이즈*/
+body {
+font-family: 'Pretendard', sans-serif;
+font-weight: 700;
+ margin: 0 auto;
+}
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+text-decoration: none;
+list-style: none;
+color: inherit;
+}
+.bg-red{
+  background-color: red;
+}
+.bg-blue{
+background-color: blue;
+}
+.bg-green{
+  background-color: green;
+}
+.flex{
+  display: flex;
+}
+/*구현 시작*/
+header{
+  height: 100px;
+  border-bottom: 1px solid #000;
+}
+.top-bar{
+  max-width:1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
+}
+.logo-box{
+  display: flex;
+  width:200px;
+  align-items: center;
+}
+.logo-box > img{
+  width: 100%;
+}
+/*메뉴박스 */
+.menu-box{
+  width:750px;
+  height: 100%;
+}
+.menu-box > ul{
+  height: 100%;
+   justify-content: center;
+  align-items: center;
+}
+.menu-box > ul >li{
+  font-size: 1.5rem;
+  width:180px;
+}
+.menu-box > ul >li>a{
+  display: flex;
+  width: 180px;
+  justify-content: center;
+}
+/*유틸 박스*/
+.util-box{
+  width:150px;
+  height: 100%;
+}
+.util-box > ul{
+  height: 100%;
+  align-items: center;
+}
+.util {
+width:30px;
+height: 30px;
+margin: 0 10px;
+}
+.util > a {
+width: 30px;
+height: 30px;
+}
+.util > a > img{
+width: 30px;
+height: 30px;
+}
