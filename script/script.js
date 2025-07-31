@@ -33,3 +33,12 @@ search_btn__init();
 
 // // 돋보기 버튼 클릭해도 검색되게
 // searchButton.addEventListener("click", doSearch);
+
+//슬라이드 박스
+function slideBox__init() {
+  let slideIndex = 0;
+  setInterval(function () {
+    $(".slide-box").attr("data-index", ++slideIndex % 3);
+  }, 4000);
+}
+slideBox__init();
