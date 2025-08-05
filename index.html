@@ -1,110 +1,120 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.css">
-  <title>GRWY</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./css/style.css">
+<title>GRWY</title>
 </head>
 <body>
-  <main>
-    <!--탑바 구현-->
-    <section class="search-box">
-      <div class="search-bar-wrap">
-        <div class="search-bar">
-          <input type="text" id="search" placeholder="검색어를 입력하세요" />
-          <nav class="search-btn"><img src="./img/search.png" alt="검색하기"></nav></div>
-          <div class="clear-btn"><img src="./img/clear.png" alt="취소"></div>
+<main>
+  <!--탑바 구현-->
+  <section class="search-box">
+    <div class="search-bar-wrap">
+      <div class="search-bar">
+        <input type="text" id="search" placeholder="검색어를 입력하세요" />
+        <nav class="search-btn"><img src="./img/search.png" alt="검색하기"></nav></div>
+        <div class="clear-btn"><img src="./img/clear.png" alt="취소"></div>
+    </div>
+
+  </section>
+  <header>
+    <section class="top-bar">
+      <div class="logo-box">
+        <img src="./img/GRWY_logo_black.png" alt="GRWY 로고">
       </div>
+      <div class="menu-box">
+        <ul class="flex">
+          <li><a href="#">MEN</a>
+              <nav class="men-content-wrap content-wrap">
+        <ul class="flex">
+          <li><a href="#">BEST</a></li>
+          <li><a href="#">NEW</a></li>
+          <li><a href="#">OUTER</a></li>
+          <li><a href="#">TOP</a></li>
+          <li><a href="#">BOTTOM</a></li>
+            <li><a href="#">ACC</a></li>
+        </ul>
+      </nav></li>
+          <li><a href="#">WOMEN</a>
+                      <nav class="women-content-wrap content-wrap">
+        <ul class="flex">
+          <li><a href="#">BEST</a></li>
+          <li><a href="#">NEW</a></li>
+          <li><a href="#">OUTER</a></li>
+          <li><a href="#">TOP</a></li>
+          <li><a href="#">BOTTOM</a></li>
+          <li><a href="#">ONE-PIECE</a></li>
+            <li><a href="#">ACC</a></li>
+        </ul>
+      </nav></li>
+          <li><a href="#">BRAND</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="util-box">
+          <ul class="flex">
+          <li class="util-search util"><img src="./img/search.png" alt="검색"></li>
+          <li class="util-mypage util"><img src="./img/mypage.png" alt="마이페이지">
+          <ul class="mypage-menu">
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">아이디/비번찾기</a></li>
+          </ul></li>
+          <li class="util-cart util"><a href="#"><img src="./img/cart.png" alt="장바구니"></a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="menu-contain">
+            
+    </section> 
+    <section class="menu-contain">
 
     </section>
-    <header>
-      <section class="top-bar">
-        <div class="logo-box">
-          <img src="./img/GRWY_logo_black.png" alt="GRWY 로고">
-        </div>
-        <div class="menu-box">
-          <ul class="flex">
-            <li><a href="#">MEN</a>
-               <nav class="men-content-wrap content-wrap">
-          <ul class="flex">
-            <li><a href="#">BEST</a></li>
-            <li><a href="#">NEW</a></li>
-            <li><a href="#">OUTER</a></li>
-            <li><a href="#">TOP</a></li>
-            <li><a href="#">BOTTOM</a></li>
-             <li><a href="#">ACC</a></li>
-          </ul>
-        </nav></li>
-            <li><a href="#">WOMEN</a>
-                       <nav class="women-content-wrap content-wrap">
-          <ul class="flex">
-            <li><a href="#">BEST</a></li>
-            <li><a href="#">NEW</a></li>
-            <li><a href="#">OUTER</a></li>
-            <li><a href="#">TOP</a></li>
-            <li><a href="#">BOTTOM</a></li>
-            <li><a href="#">ONE-PIECE</a></li>
-             <li><a href="#">ACC</a></li>
-          </ul>
-        </nav></li>
-            <li><a href="#">BRAND</a></li>
-            <li><a href="#">FAQ</a></li>
-          </ul>
-        </div>
-        <div class="util-box">
-            <ul class="flex">
-            <li class="util-search util"><img src="./img/search.png" alt="검색"></li>
-            <li class="util-mypage util"><img src="./img/mypage.png" alt="마이페이지">
-            <ul class="mypage-menu">
-              <li><a href="#">로그인</a></li>
-              <li><a href="#">회원가입</a></li>
-              <li><a href="#">아이디/비번찾기</a></li>
-            </ul></li>
-            <li class="util-cart util"><a href="#"><img src="./img/cart.png" alt="장바구니"></a></li>
-          </ul>
-        </div>
-      </section>
-      <section class="menu-contain">
-             
-      </section> 
-      <section class="menu-contain">
-  
-      </section>
-    </header>
-    <!--메인 구현-->
-    <section class="main-banner">
-      <div class="slide-wrap">
-        <div class="slide-box" data-index="0">
-          <div class="slides">
-            <div class="slide-item slide-item-1"><a href="#"><img src="./img/acc-banner.png" alt="여름 무드 완성! 악세사리 최대 30% off"></a></div>
-            <div class="slide-item slide-item-2"><a href="#"><img src="./img/new-banner.png" alt="지금 딱 입기 좋은 신상 보러가기"></a></div>
-            <div class="slide-item slide-item-3"><a href="#"><img src="./img/best-banner.png" alt="가장 많이 선택된 이유 best 상품"></a></div>
-          </div>
+  </header>
+  <!--메인 구현-->
+  <section class="main-banner">
+    <div class="slide-wrap">
+      <div class="slide-box" data-index="0">
+        <div class="slides">
+          <div class="slide-item slide-item-1"><a href="#"><img src="./img/acc-banner.png" alt="여름 무드 완성! 악세사리 최대 30% off"></a></div>
+          <div class="slide-item slide-item-2"><a href="#"><img src="./img/new-banner.png" alt="지금 딱 입기 좋은 신상 보러가기"></a></div>
+          <div class="slide-item slide-item-3"><a href="#"><img src="./img/best-banner.png" alt="가장 많이 선택된 이유 best 상품"></a></div>
         </div>
       </div>
-    </section>
-    <section class="brand-intro">
-      <div class="brand-bg-overlay">
-        <div class="brand-content">
-                <p class="brand-subtext">
-                  우리는 단순히 옷을 팔지 않습니다.
-                </p>
-      <h2 class="brand-maintext">
-        거리 위 감성을 입습니다.
-      </h2>
-      <p class="brand-text">
-        GRWY는 개성 있는 거리 감성을 추구하는 셀렉트 쇼핑몰입니다.
-      </p>
-       <a href="#" class="brand-cta">
-        브랜드 소개 보기 →
-      </a>
-        </div>
+    </div>
+  </section>
+  <section class="brand-keywords">
+    <ul class="keyword-list">
+      <li class="keyword">Raw</li>
+  <li class="keyword">Street</li>
+  <li class="keyword">Identity</li>
+  <li class="keyword keyword-darkgray">Local</li>
+  <li class="keyword keyword-gray">Edited</li>
+  <li class="keyword keyword-white">Real</li>
+    </ul>
+  </section>
+  <section class="brand-intro">
+    <div class="brand-bg-overlay">
+      <div class="brand-content">
+              <p class="brand-subtext">
+                우리는 단순히 옷을 팔지 않습니다.
+              </p>
+    <h2 class="brand-maintext">
+      거리 위 감성을 입습니다.
+    </h2>
+    <p class="brand-text">
+      GRWY는 개성 있는 거리 감성을 추구하는 셀렉트 쇼핑몰입니다.
+    </p>
+      <a href="#" class="brand-cta">
+      브랜드 소개 보기 →
+    </a>
       </div>
-    </section>
-    <!--푸터 구현-->
-    <footer></footer>
-  </main>
+    </div>
+  </section>
+  <!--푸터 구현-->
+  <footer></footer>
+</main>
 </body>
 <script src="./script/jquery-3.7.1.js"></script>
 <script src="./script/script.js"></script>

@@ -42,3 +42,17 @@ function slideBox__init() {
   }, 4000);
 }
 slideBox__init();
+
+//스크롤 시 브랜드 키워드 나타내기
+const keyword = document.querySelectorAll(".keyword");
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
+    }
+  });
+});
+
+keyword.forEach((el) => observer.observe(el));
