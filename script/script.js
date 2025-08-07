@@ -56,3 +56,58 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 keyword.forEach((el) => observer.observe(el));
+
+//지금 많이 찾는 상품 슬라이드 구현
+
+const slider = document.getElementById("slider");
+const slideItems = document.querySelectorAll(".slide-item");
+const categories = document.querySelectorAll(".category");
+const nextBtn = document.getElementById("next");
+const prevBtn = document.getElementById("prev");
+
+let currentIndex = 0;
+const itemsPerPage = 4;
+const totalSlides = slideItems.length;
+
+function updateSlider() {
+  const offset = -(currentIndex * (100 / itemsPerPage));
+  slider.style.transform = `translateX(${offset}%)`;
+
+  const currentCat = slideItems[currentIndex].dataset.cat;
+  categories.forEach((cat) => {
+    cat.classList.toggle("active", cat.dataset.cat === currentCat);
+  });
+}
+
+nextBtn.addEventListener("click", () => {
+  if (currentIndex + itemsPerPage < totalSlides) {
+    currentIndex += itemsPerPage;
+    updateSlider();
+  }
+});
+
+prevBtn.addEventListener("click", () => {
+  if (currentIndex > 0) {
+    currentIndex -= itemsPerPage;
+    updateSlider();
+  }
+});
+
+updateSlider();
+
+categories.forEach((category) => {
+  category.addEventListener("click", () => {
+    const selectedCat = category.dataset.cat;
+
+    // 해당 카테고리의 첫 번째 슬라이드 인덱스 찾기
+    const targetIndex = Array.from(slideItems).findIndex(
+      (item) => item.dataset.cat === selectedCat
+    );
+
+    if (targetIndex !== -1) {
+      // 해당 카테고리가 포함된 페이지 인덱스로 이동
+      currentIndex = Math.floor(targetIndex / itemsPerPage) * itemsPerPage;
+      updateSlider();
+    }
+  });
+});

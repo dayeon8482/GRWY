@@ -249,37 +249,51 @@ height: 100%;
 height: 100%;
 position: relative;
 }
-.slide-item{
+.slide{
   position: absolute;
   width: 100%;
 height: 100%;
 opacity: 0;
 transition: opacity .3s;
 }
-.slide-item>a{
+.slide>a{
   width: 100%;
 height: 100%;
 }
-.slide-item>a>img{
+.slide>a>img{
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.slide-item>a >p{
+.banner-title{
   position: absolute;
-  top:500px;
-  left:150px;
+  line-height: 50px;
   text-align: center;
   color:#fff;
-  font-size: 3rem;
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-shadow: 4px 4px 4px #3e3e3e;
 }
-.slide-box[data-index="0"] .slide-item-1{
+.banner1-title{
+  top:60%;
+  left:10%;
+}
+.banner2-title{
+  top:60%;
+  left:50%;
+  transform: translateX(-50%);
+}
+.banner3-title{
+  top:60%;
+  left:70%;
+}
+.slide-box[data-index="0"] .slide-1{
 	opacity: 1;
 }
-.slide-box[data-index="1"] .slide-item-2 {
+.slide-box[data-index="1"] .slide-2 {
 	opacity: 1;
 }
-.slide-box[data-index="2"] .slide-item-3 {
+.slide-box[data-index="2"] .slide-3 {
 	opacity: 1;
 }
 /*브랜드 키워드 섹션 구현*/
@@ -373,4 +387,88 @@ height: 100%;
 .brand-cta:hover {
   background-color: #fff;
   color: #000;
+}
+/*지금 많이 찾는 상품 섹션 구현*/
+.best-section{
+  padding: 40px 0;
+}
+.best-title{
+  font-size: 2rem;
+  margin-top: 20px;
+  text-align: center;
+  cursor: default;
+}
+.categories{
+  width:100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;;
+}
+.category{
+  padding:5px 10px;
+  margin:15px;
+  cursor: pointer;
+  border-bottom: 1px solid #cecece;
+  transition: border .3s;
+
+}
+.category:hover, .category.active{
+  border-bottom: 1px solid #000;
+}
+.slider-container{
+  width:100%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+.slider{
+    transition: transform 0.7s ease;
+  width:100%;
+  height: 350px;
+  display: flex;
+  
+}
+.slide-item{
+  min-width:25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.slide-item img{
+  width:250px;
+  height: 250px;
+  object-fit: cover;
+}
+.product-info{
+  text-align: center;
+  margin: 15px 0;
+}
+.name{
+font-size: 1rem;
+font-weight: 700;
+}
+.price{
+  padding-top: 10px;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+.buttons{
+  margin:10px auto;
+  display: flex;
+  justify-content: center;
+}
+button{
+  background-color: transparent;
+  border:none;
+margin:0 15px;
+padding:8px 12px;
+border-radius: 5px;
+cursor: pointer;
+border:1px solid #dcdcdc;
+}
+button:hover{
+  color:#717171;
 }
